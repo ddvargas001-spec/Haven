@@ -1,0 +1,251 @@
+h1 {
+font-family: 'Playfair Display', serif;
+font-size: 48px;
+font-weight: 700;
+color: #E8CD8A;
+text-align: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    color: #F3EDE1;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    color: #E8CD8A;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    color: #E8CD8A;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    color: #A99D8A;
+}
+
+ul {
+    font-family: "Montserrat", sans-serif;
+    color: #A99D8A;
+}
+
+ol {
+    font-family: "Montserrat", sans-serif;
+    color: #A99D8A;
+}
+
+table {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* IMPORTAR FUENTE */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* RESETEO GENERAL */
+
+•⁠  ⁠{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ESTILOS GENERALES */
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #0C0B0A;
+    color: #F3EDE1;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #141210;
+    padding: 45px 10%;
+    margin-bottom: 40px;
+    border-bottom: 5px solid #C9A24B;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #F3EDE1;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+
+/* TÍTULOS SECUNDARIOS */
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E8CD8A;
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #C9A24B;
+}
+
+
+/* SECCIONES GENERALES */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+
+/* SECCIÓN DE MENÚ */
+
+.menu {
+    background-color: #1A1714;
+    border: 2px solid #C9A24B;
+    border-radius: 12px;
+}
+
+
+/* TABLA DEL MENÚ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #1A1714;
+    border: 2px solid #C9A24B;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* ENCABEZADO DE LA TABLA */
+
+th {
+    background-color: #C9A24B;
+    color: #0C0B0A;
+    font-size: 20px;
+    padding: 18px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+
+/* CELDAS DE LA TABLA */
+
+td {
+    color: #F3EDE1;
+    padding: 18px;
+    border-bottom: 1px solid #4A4033;
+    font-size: 17px;
+}
+
+
+/* ÚLTIMA FILA */
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* EFECTO AL PASAR EL CURSOR */
+
+tbody tr:hover {
+    background-color: #201C17;
+}
+
+
+/* SECCIÓN NOSOTROS */
+
+.nosotros {
+    background-color: #1A1714;
+    border-left: 6px solid #C9A24B;
+    border-right: 1px solid #4A4033;
+    border-top: 1px solid #4A4033;
+    border-bottom: 1px solid #4A4033;
+    border-radius: 12px;
+}
+
+
+/* PÁRRAFOS */
+
+p {
+    font-size: 18px;
+    color: #A99D8A;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #141210;
+    color: #F3EDE1;
+    text-align: center;
+    padding: 40px 10%;
+    margin-top: 60px;
+    border-top: 5px solid #C9A24B;
+}
+
+
+/* TEXTO DEL FOOTER */
+
+footer p {
+    color: #A99D8A;
+    margin: 0;
+}
+
+
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    section {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+    }
+}
+
+

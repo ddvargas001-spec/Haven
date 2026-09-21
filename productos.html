@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos | Haven — Cocktail &amp; Spirits Bar</title>
+<meta name="description" content="Descubre la carta de cócteles de autor y botellas selectas de Haven. Agrega tus favoritos al carrito y arma tu pedido.">
+
+<!-- Bootstrap 5 (solo se usa para el sistema de modales y algunas utilidades de layout) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Hoja de estilos propia de Haven: se carga DESPUÉS de Bootstrap para que gane la cascada -->
+<link rel="stylesheet" href="Producto.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <a href="index.html" class="logo">
+        <span class="logo-box">H</span>
+        <span>HAVEN</span>
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html" aria-current="page">Productos</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#reservaciones">Reservaciones</a>
+        <a href="contacto.html">Contacto</a>
+
+        <button type="button" class="cart-toggle" id="cartToggle" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Abrir carrito de compras">
+            🛒
+            <span class="cart-badge is-hidden" id="cartBadge" aria-live="polite">0</span>
+        </button>
+
+        <a href="#reservaciones" class="btn-reserva">Reservar</a>
+    </nav>
+</header>
+<!-- Video de YouTube -->
+<section class="container py-5">
+  <div class="ratio ratio-16x9 mx-auto" style="max-width: 900px;">
+    <iframe
+      src="https://www.youtube.com/embed/Tza4xFLph1Y?si=9RAZI8dswXMCezms"
+      title="Video de HAVEN"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <p class="subtitle">Menú Haven</p>
+        <h1>Cócteles &amp; Espirituosos</h1>
+        <div class="line"></div>
+        <p class="hero-text">
+            Una selección curada de cócteles de autor y botellas selectas, pensada
+            para acompañar cada momento de tu noche en Haven. Agrega tus favoritos
+            al carrito y arma tu pedido antes de llegar.
+        </p>
+    </div>
+</section>
+
+<!-- ================= PRODUCTOS ================= -->
+<section class="productos" id="productos">
+
+    <!-- ---------- Buscador de productos ---------- -->
+    <div class="search-bar">
+        <div class="input-group">
+            <span class="input-group-text">🔍</span>
+            <input type="search" id="productSearch" class="form-control" placeholder="Buscar cóctel o botella..." aria-label="Buscar producto">
+            <button type="button" class="search-clear-btn is-hidden" id="searchClearBtn" aria-label="Limpiar búsqueda">✕</button>
+        </div>
+    </div>
+    <p id="searchEmptyMessage" class="search-empty is-hidden">No encontramos productos que coincidan con tu búsqueda.</p>
+
+    <!-- ---------- Producto destacado ---------- -->
+    <div class="producto-destacado">
+        <div class="botella-contenedor">
+            <div class="botella">
+                <div class="tapa"></div>
+                <div class="cuello"></div>
+                <div class="cuerpo">
+                    <span class="h-botella">H</span>
+                    <strong>RESERVA</strong>
+                    <small>WHISKY AÑEJADO</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-destacada">
+            <p class="subtitle">Producto Destacado</p>
+            <h2>Whisky Haven Reserva</h2>
+            <div class="line left"></div>
+            <p class="descripcion">
+                Añejado durante doce años en barricas de roble americano, nuestro
+                whisky insignia combina notas de vainilla, miel y roble tostado.
+                Una pieza de colección para los paladares más exigentes.
+            </p>
+
+            <div class="caracteristicas">
+                <div class="caracteristica"><span>🥃</span><p>750 ML</p></div>
+                <div class="caracteristica"><span>🔥</span><p>40% VOL.</p></div>
+                <div class="caracteristica"><span>🌾</span><p>AÑEJAMIENTO 12 AÑOS</p></div>
+            </div>
+
+            <div class="precio-accion">
+                <span class="precio">$1,450.00</span>
+                <button type="button" class="btn-add"
+                    data-id="whisky-reserva"
+                    data-name="Whisky Haven Reserva"
+                    data-price="1450"
+                    data-icon="🥃">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------- Cócteles de autor ---------- -->
+    <div class="titulo-seccion" id="tituloCocteles">
+        <div></div>
+        <h2>Cócteles de Autor</h2>
+        <div></div>
+    </div>
+
+    <div class="grid-cocteles">
+
+        <div class="card">
+            <div class="icono-card">🥃</div>
+            <h3>Old Fashioned Haven</h3>
+            <div class="mini-line"></div>
+            <p>Whisky, azúcar de agave y bitters de naranja, con un twist de cáscara flameada.</p>
+            <span>$185.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="old-fashioned"
+                data-name="Old Fashioned Haven"
+                data-price="185"
+                data-icon="🥃">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🍷</div>
+            <h3>Negroni Dorado</h3>
+            <div class="mini-line"></div>
+            <p>Gin, vermut rojo y Campari en equilibrio perfecto, servido con hielo tallado a mano.</p>
+            <span>$195.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="negroni-dorado"
+                data-name="Negroni Dorado"
+                data-price="195"
+                data-icon="🍷">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🍹</div>
+            <h3>Margarita de Autor</h3>
+            <div class="mini-line"></div>
+            <p>Tequila blanco, licor de naranja y limón recién exprimido, con borde de sal de grano.</p>
+            <span>$175.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="margarita-autor"
+                data-name="Margarita de Autor"
+                data-price="175"
+                data-icon="🍹">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🌿</div>
+            <h3>Mojito de la Casa</h3>
+            <div class="mini-line"></div>
+            <p>Ron blanco, hierbabuena fresca, limón y un sutil toque de jengibre.</p>
+            <span>$165.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="mojito-casa"
+                data-name="Mojito de la Casa"
+                data-price="165"
+                data-icon="🌿">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🍸</div>
+            <h3>Martini Dorado</h3>
+            <div class="mini-line"></div>
+            <p>Gin premium y vermut seco, coronado con una aceituna rellena de anchoa.</p>
+            <span>$210.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="martini-dorado"
+                data-name="Martini Dorado"
+                data-price="210"
+                data-icon="🍸">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🥂</div>
+            <h3>Manhattan Nocturno</h3>
+            <div class="mini-line"></div>
+            <p>Whisky de centeno, vermut dulce y bitters aromáticos, con cereza al marrasquino.</p>
+            <span>$200.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="manhattan-nocturno"
+                data-name="Manhattan Nocturno"
+                data-price="200"
+                data-icon="🥂">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🍧</div>
+            <h3>Daiquiri de Maracuyá</h3>
+            <div class="mini-line"></div>
+            <p>Ron blanco, maracuyá natural y un toque de lima, fresco y aromático.</p>
+            <span>$180.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="daiquiri-maracuya"
+                data-name="Daiquiri de Maracuyá"
+                data-price="180"
+                data-icon="🍧">
+                Agregar al carrito
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="icono-card">🍸</div>
+            <h3>Cosmopolitan Haven</h3>
+            <div class="mini-line"></div>
+            <p>Vodka, licor de naranja, arándano y un toque de lima. Elegante y vibrante.</p>
+            <span>$190.00</span>
+            <button type="button" class="btn-add btn-add--block"
+                data-id="cosmopolitan-haven"
+                data-name="Cosmopolitan Haven"
+                data-price="190"
+                data-icon="🍸">
+                Agregar al carrito
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ---------- Botellas selectas ---------- -->
+    <div class="titulo-seccion" id="tituloBotellas">
+        <div></div>
+        <h2>Botellas Selectas</h2>
+        <div></div>
+    </div>
+
+    <div class="grid-botellas">
+
+        <div class="botella-card">
+            <div class="botella-mini"></div>
+            <div>
+                <h3>Ron Añejo Haven</h3>
+                <div class="line left left-mini"></div>
+                <p>Añejado 8 años, con notas de caramelo, vainilla y especias suaves.</p>
+                <span>$980.00</span>
+                <button type="button" class="btn-add btn-add--block"
+                    data-id="ron-anejo"
+                    data-name="Ron Añejo Haven"
+                    data-price="980"
+                    data-icon="🥃">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <div class="botella-card">
+            <div class="botella-mini"></div>
+            <div>
+                <h3>Gin Botánico Haven</h3>
+                <div class="line left left-mini"></div>
+                <p>Gin artesanal con botánicos locales y un cierre cítrico brillante.</p>
+                <span>$890.00</span>
+                <button type="button" class="btn-add btn-add--block"
+                    data-id="gin-botanico"
+                    data-name="Gin Botánico Haven"
+                    data-price="890"
+                    data-icon="🍸">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <div class="botella-card">
+            <div class="botella-mini"></div>
+            <div>
+                <h3>Tequila Blanco Haven</h3>
+                <div class="line left left-mini"></div>
+                <p>100% agave, destilado tres veces. Perfil suave, herbal y persistente.</p>
+                <span>$850.00</span>
+                <button type="button" class="btn-add btn-add--block"
+                    data-id="tequila-blanco"
+                    data-name="Tequila Blanco Haven"
+                    data-price="850"
+                    data-icon="🌵">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <div class="botella-card">
+            <div class="botella-mini"></div>
+            <div>
+                <h3>Vodka Destilado Haven</h3>
+                <div class="line left left-mini"></div>
+                <p>Vodka de trigo filtrado cinco veces para una pureza excepcional.</p>
+                <span>$790.00</span>
+                <button type="button" class="btn-add btn-add--block"
+                    data-id="vodka-destilado"
+                    data-name="Vodka Destilado Haven"
+                    data-price="790"
+                    data-icon="🧊">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <div class="botella-card">
+            <div class="botella-mini"></div>
+            <div>
+                <h3>Mezcal Ahumado Haven</h3>
+                <div class="line left left-mini"></div>
+                <p>Mezcal artesanal de Oaxaca, con notas ahumadas, terrosas y minerales.</p>
+                <span>$920.00</span>
+                <button type="button" class="btn-add btn-add--block"
+                    data-id="mezcal-ahumado"
+                    data-name="Mezcal Ahumado Haven"
+                    data-price="920"
+                    data-icon="🔥">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <div class="botella-card">
+            <div class="botella-mini"></div>
+            <div>
+                <h3>Cognac Selecto Haven</h3>
+                <div class="line left left-mini"></div>
+                <p>Cognac francés añejado, con aromas de frutos secos, roble y especias.</p>
+                <span>$1,650.00</span>
+                <button type="button" class="btn-add btn-add--block"
+                    data-id="cognac-selecto"
+                    data-name="Cognac Selecto Haven"
+                    data-price="1650"
+                    data-icon="🍯">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= EXPERIENCIAS ================= -->
+<section class="experiencias" id="experiencias">
+    <p class="subtitle">Vive Haven</p>
+    <h2>Experiencias a la Medida</h2>
+    <div class="line"></div>
+    <p>
+        Cada visita a Haven es una invitación a descubrir maridajes, catas guiadas
+        y noches temáticas diseñadas por nuestros mixólogos. Consulta con nuestro
+        equipo por experiencias privadas y eventos especiales.
+    </p>
+</section>
+
+<!-- ================= RESERVACIONES ================= -->
+<section class="reservaciones" id="reservaciones">
+    <div>
+        <p class="subtitle">Reserva tu Mesa</p>
+        <h2>Vive la Noche en Haven</h2>
+        <p>
+            Aparta tu lugar y disfruta de nuestra coctelería de autor en un ambiente
+            íntimo y sofisticado. Te esperamos de martes a domingo desde las 18:00 hrs.
+        </p>
+        <a href="#" class="btn">Reservar Ahora</a>
+    </div>
+
+    <div class="bar-carousel">
+        <div class="carousel-track">
+            <img src="https://picsum.photos/seed/haven-bar-1/400/400" alt="Barra de cócteles de Haven" class="carousel-slide is-active">
+            <img src="https://picsum.photos/seed/haven-bar-2/400/400" alt="Ambiente interior de Haven" class="carousel-slide">
+            <img src="https://picsum.photos/seed/haven-bar-3/400/400" alt="Cóctel de autor servido en Haven" class="carousel-slide">
+            <img src="https://picsum.photos/seed/haven-bar-4/400/400" alt="Detalle de barra y botellas en Haven" class="carousel-slide">
+        </div>
+        <div class="carousel-dots">
+            <button type="button" class="dot is-active" aria-label="Ver foto 1"></button>
+            <button type="button" class="dot" aria-label="Ver foto 2"></button>
+            <button type="button" class="dot" aria-label="Ver foto 3"></button>
+            <button type="button" class="dot" aria-label="Ver foto 4"></button>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-logo-box">H</div>
+            <h2>HAVEN</h2>
+            <p>Cocktail &amp; Spirits Bar</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Navegación</h3>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="#experiencias">Experiencias</a>
+            <a href="#reservaciones">Reservaciones</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <p>Av. Principal 123, Centro</p>
+            <p>México</p>
+            <p>+52 55 0000 0000</p>
+            <p>hola@havenbar.mx</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Horario</h3>
+            <p>Martes a Jueves: 18:00 – 00:00</p>
+            <p>Viernes y Sábado: 18:00 – 02:00</p>
+            <p>Domingo: 17:00 – 23:00</p>
+            <p>Lunes: Cerrado</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Síguenos</h3>
+            <div class="social">
+                <a href="#" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" target="_blank" rel="noopener">Facebook</a>
+                <a href="#" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p style="margin:0;">&copy; 2026 Haven. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- ================= MODAL: CARRITO ================= -->
+<div class="modal fade haven-modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="cartModalLabel">Tu Carrito</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="cartItemsContainer" class="cart-list"></div>
+            </div>
+
+            <div class="modal-footer flex-column align-items-stretch">
+                <div class="cart-summary">
+                    <span>Total (MXN)</span>
+                    <strong id="cartTotal">$0.00</strong>
+                </div>
+                <div class="cart-footer-actions">
+                    <button type="button" class="btn-outline-gold" id="clearCartBtn" disabled>Vaciar carrito</button>
+                    <button type="button" class="btn" id="checkoutBtn" disabled>Finalizar pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= MODAL: PEDIDO CONFIRMADO ================= -->
+<div class="modal fade haven-modal" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-body py-5">
+                <div class="order-success-icon">✓</div>
+                <h2 id="orderModalLabel">¡Pedido completado!</h2>
+                <p>Gracias por tu compra en Haven.</p>
+                <button type="button" class="btn mt-2" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS (necesario para el funcionamiento de los modales) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Lógica del carrito y del carrusel -->
+<script src="script.js"></script>
+</body>
+</html>
